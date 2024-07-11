@@ -78,6 +78,7 @@ img {
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .container-info{
@@ -270,7 +271,9 @@ img {
         grid-template-columns: 1fr;
         row-gap: 150px;
         height: auto;
-        padding:5%;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
     }
 
     .img-info{
@@ -328,7 +331,7 @@ img {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1100px){
     .btns-info{
         flex-direction: column;
         height: 210px;
@@ -339,6 +342,37 @@ img {
     }
 
     .skills{
+        width: 70%;
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .informacion{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .cuadrado-img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .info_img{
+        width: 300px;
+        transform: rotate(-45deg) translateY(-40px) translateX(40px);
+    }
+
+    .about-me{
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .container-skills{
+        padding: 5%;
+    }
+
+    .container-skills h2{
+        font-size: 1.5rem;
     }
 }
