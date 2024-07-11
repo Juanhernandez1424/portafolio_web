@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-background: rgb(41, 42, 51);
+    --color-background-second: rgb(45, 47, 65);
+    --color-principal: rgb(1, 172, 252);
+    --color-principal-rgba: rgba(1, 172, 252, 0.6);
+    --color-back-barra-progeso: rgba(1, 172, 252, 0.2);
+    --color-background-nav-bar: rgba(1, 172, 252, 0.9);
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    justify-content: center;
+    background-color: var(--color-background);
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+img {
+    width: 600px;
+    /* border-radius: 50%; */
+    /* border: 4px solid var(--color-principal); */
+    /* padding: 5px; */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    transition: .5s;
+    padding: 0% 5% 0% 5%;
+    border-bottom: 1px solid #fff;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 50px;
+    font-size: 1.5rem;
+}
+
+.btn-hamburguesa_nav-bar{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    row-gap: 30px;
+    padding: 0% 5% 0% 5%;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.img-info{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding-right: 10%;
+}
+
+.cuadrado-img{
+    width: 500px;
+    height: 500px;
+    background-color: var(--color-principal);
+    position: relative;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    border: 2px solid var(--color-principal);
+    box-shadow: 10px 10px 10px 0px var(--color-principal-rgba);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.info_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-45deg) translateY(-200px) translateX(70px);
+}
+
+.btns-info{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 8px 8px 0px var(--color-principal-rgba);
+    transition: .5s;
+    &:hover{
+        background-color: var(--color-principal-rgba);
+        transform: scale3d(1,1,1,1 45deg);
+        transition: .5s;
+    }
+}
+
+.btn_download-cv{
+    background-color: var(--color-principal); 
+}
+
+.btn_skills{
+    background-color: transparent;
+    border: 3px solid var(--color-principal);
+    position: relative;
+}
+
+.btn_skills a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-about_me{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background-second);
+    padding: 0% 5% 0% 5%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.img-about_me{
+    display: flex;
+    align-items: center;
+}
+
+.img-about_me img{
+    border-radius: 50%;
+}
+
+.about-me{
+    font-size: 2rem;
+}
+
+.container-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    row-gap: 100px;
+    font-size: 2rem;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    row-gap: 30px;
+}
+
+.progress{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.progress-bar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-back-barra-progeso);
+    top: 0;
+    left: 0;
+}
+
+.progress-bar span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    background-color: rgb(1, 172, 252);
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px 6px 6px 0px rgb(1, 172, 252);
+    animation: progreso 2s linear;
+}
+
+@keyframes progreso {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: span;
+    }
+}
+
+@media (max-width: 1500px) {
+    .container-info{
+        grid-template-columns: 1fr;
+        row-gap: 150px;
+        height: auto;
+        padding:5%;
+    }
+
+    .img-info{
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .container-about_me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .img-about_me{
+        display: none;
+    }
+
+    .container-skills{
+        padding: 5%;
+        height: auto;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-bar{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 200px;
+        background-color: var(--color-background-nav-bar);
+        width: 100%;
+        height: 100vh;
+        top: 100px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-bar.active{
+        display: flex;
+    }
+
+    .btn-hamburguesa_nav-bar{
+        display: block;
+    }
+
+    .btn_hamburguesa{
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .btns-info{
+        flex-direction: column;
+        height: 210px;
+    }
+
+    .btn{
+        width: 50%;
+    }
+
+    .skills{
+        grid-template-columns: 1fr;
+    }
+}
