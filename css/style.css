@@ -321,14 +321,17 @@ img {
     }
 
     .btn-hamburguesa_nav-bar{
-        display: block;
+        display: flex;
     }
 
     .btn_hamburguesa{
         border: none;
         background-color: transparent;
         color: #fff;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -349,9 +352,12 @@ img {
 }
 
 @media (max-width: 700px) {
-    .informacion{
+    .container-info{
         width: 100%;
-        font-size: 1rem;
+    }
+
+    .informacion{
+        font-size: 1.5rem;
     }
 
     .cuadrado-img{
@@ -364,9 +370,13 @@ img {
         transform: rotate(-45deg) translateY(-40px) translateX(40px);
     }
 
+    .container-about_me{
+        width: 100%;
+        height: auto;
+    }
+
     .about-me{
-        width: 70%;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .container-skills{
@@ -374,6 +384,11 @@ img {
     }
 
     .container-skills h2{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .progress h4{
         font-size: 1.5rem;
     }
 }
