@@ -16,14 +16,14 @@
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Header Page -->
     <header class="header">
       <h1><a href="index.html">Portafolio</a></h1>
       <nav class="nav-bar" id="nav-bar">
-        <a href="#" id="links">Home</a>
-        <a href="#container-about_me" id="links">About</a>
-        <a href="#container-skills" id="links">Skills</a>
-        <a href="#projcts" id="links">Projetcs</a>
+        <a href="#" id="links">Inicio</a>
+        <a href="#container-about_me" id="links">Acerca de</a>
+        <a href="#container-skills" id="links">Habilidades</a>
+        <a href="#container_projects" id="links">Proyectos</a>
       </nav>
       <div class="btn-hamburguesa_nav-bar">
         <button class="btn_hamburguesa" id="btn_hamburguesa">
@@ -31,6 +31,8 @@
         </button>
       </div>
     </header>
+
+    <!-- Container Page -->
     <div class="container">
       <!-- Container informacion -->
       <div class="container-info" id="container-info">
@@ -53,11 +55,12 @@
             class="btn btn_download-cv"
             id="download-cv"
             download="Hoja de vida Juan Hernandez"
+            target="_blank"
           >
-            Download CV
+            Descargar CV
           </button>
           <button class="btn btn_skills" id="btn_skills">
-            <a href="#container-skills">Skills</a>
+            <a href="#container-skills">Habilidades</a>
           </button>
         </div>
       </div>
@@ -68,7 +71,7 @@
           <img src="img/FotoPortfolio.png" alt="img-second" />
         </div>
         <div class="about-me">
-          <h2>Acerde de mí</h2>
+          <h2>Acerca de mí</h2>
           <p>
             Ingeniero de Software (en curso), con experiencia laboral como
             Analista Funcional QA, testeando aplicaciones y sistemas funcionales
@@ -87,7 +90,45 @@
         <h2>Skills de desarrollo</h2>
         <div class="skills" id="skills"></div>
       </div>
+
+      <!-- Container Pojects -->
+      <div class="container_projects" id="container_projects">
+        <h2>Proyectos</h2>
+        <div class="proyectos" id="proyectos"></div>
+      </div>
     </div>
+
+    <!-- Footer Page -->
+    <footer class="footer">
+      <div class="info-footer">
+        <div class="footer-contenido">
+          <h5>Menu</h5>
+          <div class="contenido-menu">
+            <ul class="menu-footer">
+              <li><a href="#" id="links">Inicio</a></li>
+              <li><a href="#container-about_me" id="links">Acerca de</a></li>
+              <li><a href="#container-skills" id="links">Habilidades</a></li>
+              <li><a href="#container_projects" id="links">Proyectos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-redes-sociales">
+          <h5>Encuéntrame en</h5>
+          <div class="redes">
+            <div class="red red-linkedin">
+              <a
+                href="https://www.linkedin.com/in/juan-pablo-hern%C3%A1ndez-ramirez-3036a4156/"
+                target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="derechos-autor">
+        <p>© 2024 Juan Hernández All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>

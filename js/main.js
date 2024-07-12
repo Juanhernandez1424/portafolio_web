@@ -4,6 +4,7 @@ const btnHamburgusa = document.getElementById('btn_hamburguesa')
 const navBar = document.getElementById('nav-bar')
 const links = document.querySelectorAll('#links')
 const skills = document.getElementById('skills')
+const proyectos = document.getElementById('proyectos')
 
 let scrollLast = 0
 window.addEventListener('scroll', () => {
@@ -91,6 +92,46 @@ function mostrarSkills(skill) {
 
 habilidades.forEach(skill => {
     mostrarSkills(skill)
+})
+
+const listaProyectos = [
+    {
+        img: 'img/proyecto-delifast.PNG',
+        tecnologia: 'HTML, CSS y JAVASCRIPT',
+        nombre: 'Delifast',
+        descripcion: 'Página reponsiva para un sitio web de comidas rápidas'
+    },
+    {
+        img: 'img/proyecto-global-music.PNG',
+        tecnologia: 'Angular',
+        nombre: 'GlobalMusic',
+        descripcion: 'Página E-Commerce reponsiva para un sitio web de instrumentos musicales'
+    },
+]
+
+function mostrarProyectos(proyecto) {
+    let divProyecto = document.createElement('div')
+    divProyecto.classList.add('proyecto')
+    divProyecto.innerHTML =
+        `<div class="proyecto-img">
+            <img src="${proyecto.img}" alt="proyecto-${proyecto.nombre}" />
+        </div>
+        <div class="proyecto-info">
+            <div class="info-tecnologia">
+              <h3>${proyecto.tecnologia}</h3>
+            </div>
+            <div class="info-nombre">
+              <h4>${proyecto.nombre}</h4>
+            </div>
+            <div class="info-descripcion">
+              <p>${proyecto.descripcion}</p>
+            </div>
+        </div>`
+    proyectos.append(divProyecto)
+}
+
+listaProyectos.forEach(proyecto => {
+    mostrarProyectos(proyecto)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
